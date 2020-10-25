@@ -32,9 +32,9 @@ no_prop_c_results = client.get("chin-jaep", filer_id=1408152)
 yes_prop_c_results = client.get("chin-jaep", filer_id=1405612)
 
 api = twitter.Api(consumer_key='Xo7wj3gQ0Um9mKwuVLgY33iYO',
-                      consumer_secret='mHJJzWZVKo7HPw5MOWA8fdKxILHGNMRs5Volz4hO5Rq9YeiVp9',
+                      consumer_secret=os.environ['consumer_secret'],
                       access_token_key='1053866614821515264-Tt1yDNLLJvrQO7gNEme7zxGN7d5Ffe',
-                      access_token_secret='5U9ofvC5GdmTUSwcJrlZo53jT8ZUp8sdiZanR6Kg9uMXb')
+                      access_token_secret=os.environ['token_secret_twitter'])
 
 # while(True):
 #    tweet_for_all_in_filing(no_prop_c_results, "no_on_prop_c")
